@@ -2746,3 +2746,14 @@ iframe {
 .proj-thumb.photo-full .proj-image {
   object-fit: contain;
 }
+
+/* Langues — page Compétences */
+.lang-section {
+  max-width: 640px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.62);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  padding: 28px 32px 10px;
+  box-shadow: var(--card-shadow);
+}
