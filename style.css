@@ -2685,3 +2685,52 @@ iframe {
     .exp-detail-gallery.cols-2 { grid-template-columns: repeat(2, 1fr); }
 }
 
+
+/* ════════════════════════════════
+   LOGICIELS & OUTILS (page Compétences)
+════════════════════════════════ */
+.tools-intro {
+  margin-top: 90px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.tools-title {
+  font-size: 3.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.tools-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tools-section .sw-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.tools-section .sw-item {
+  min-height: 110px;
+  font-size: 0.75rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.62);
+  box-shadow: var(--card-shadow);
+}
+
+.tools-section .sw-item .icon {
+  font-size: 1.9rem;
+}
+
+.tools-section .sw-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(222,99,138,0.12);
+}
+
+@media (max-width: 600px) {
+  .tools-intro { margin-top: 60px; }
+  .tools-title { font-size: clamp(1.8rem, 9vw, 2.4rem); }
+  .tools-section .sw-grid { grid-template-columns: repeat(2, 1fr); }
+}
