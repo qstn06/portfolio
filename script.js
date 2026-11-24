@@ -141,3 +141,16 @@ function toggleProject(button){
   }
 
 }
+
+// ── Lire la suite (page À propos)
+const readMoreBtn = document.getElementById("readMoreBtn");
+const aboutMore = document.getElementById("aboutMore");
+
+if (readMoreBtn && aboutMore) {
+  readMoreBtn.addEventListener("click", () => {
+    const isOpen = aboutMore.classList.toggle("open");
+    readMoreBtn.classList.toggle("open", isOpen);
+    readMoreBtn.setAttribute("aria-expanded", isOpen);
+    readMoreBtn.querySelector("span").textContent = isOpen ? "Réduire" : "Lire la suite";
+  });
+}

@@ -2757,3 +2757,48 @@ iframe {
   padding: 28px 32px 10px;
   box-shadow: var(--card-shadow);
 }
+
+/* Lire la suite — page À propos */
+.about-more {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.about-more.open {
+  max-height: 800px;
+}
+
+.read-more-btn {
+  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--purple-d);
+  background: transparent;
+  border: 1.5px solid var(--border-d);
+  border-radius: 999px;
+  padding: 10px 22px;
+  cursor: none;
+  transition: all 0.2s;
+}
+
+.read-more-btn:hover {
+  background: var(--purple);
+  border-color: var(--purple);
+  color: #fff;
+}
+
+.read-more-arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.read-more-btn.open .read-more-arrow {
+  transform: rotate(180deg);
+}
