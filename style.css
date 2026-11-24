@@ -2737,3 +2737,12 @@ iframe {
   .tools-title { font-size: clamp(1.8rem, 9vw, 2.4rem); }
   .tools-section .sw-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Photos entières pour les projets personnels */
+.proj-thumb.photo-full {
+  background: #fff8fc;
+}
+
+.proj-thumb.photo-full .proj-image {
+  object-fit: contain;
+}

@@ -110,7 +110,7 @@ filterButtons.forEach(button => {
 
       const category = card.dataset.category;
 
-      if (filter === "all" || category === filter) {
+      if (filter === "all" || category.split(" ").includes(filter)) {
         card.style.display = "";
         visibleProjects++;
       } else {
