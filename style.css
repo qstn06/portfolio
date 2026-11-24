@@ -2758,11 +2758,32 @@ iframe {
   box-shadow: var(--card-shadow);
 }
 
-/* Lire la suite — page À propos */
+/* Lire la suite — page À propos (style « Show more ») */
+.about-text {
+  position: relative;
+}
+
+/* Fondu sur le bas du 3e paragraphe quand c'est fermé */
+.about-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  background: linear-gradient(to bottom, rgba(237,233,246,0), #EDE9F6 90%);
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.about-text.open::after {
+  opacity: 0;
+}
+
 .about-more {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.6s ease;
 }
 
 .about-more.open {
@@ -2770,35 +2791,39 @@ iframe {
 }
 
 .read-more-btn {
-  margin-top: 22px;
-  display: inline-flex;
+  margin-top: 18px;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
   color: var(--purple-d);
   background: transparent;
   border: 1.5px solid var(--border-d);
   border-radius: 999px;
-  padding: 10px 22px;
+  padding: 14px 22px;
   cursor: none;
-  transition: all 0.2s;
+  transition: background 0.2s, border-color 0.2s;
 }
 
 .read-more-btn:hover {
-  background: var(--purple);
+  background: rgba(222,99,138,0.08);
   border-color: var(--purple);
-  color: #fff;
 }
 
 .read-more-arrow {
   display: inline-block;
+  color: var(--purple);
+  font-size: 1.1rem;
+  line-height: 1;
+  transform: translateY(-3px);
   transition: transform 0.3s;
 }
 
 .read-more-btn.open .read-more-arrow {
-  transform: rotate(180deg);
+  transform: translateY(3px) rotate(180deg);
 }
