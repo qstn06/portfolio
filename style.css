@@ -1259,6 +1259,9 @@ font-size: clamp(2.8rem, 4.5vw, 4rem);
   gap: 32px;
   flex-wrap: wrap;
   margin-bottom: 60px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .certification-card{
