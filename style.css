@@ -2932,3 +2932,126 @@ iframe {
     gap: 22px 18px;
   }
 }
+
+/* ════════════════════════════════
+   MISE À JOUR — Compétences (4 catégories), Outils, Langues
+════════════════════════════════ */
+
+/* 4 catégories → grille 2 × 2 */
+.skills-categories {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .skills-categories { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 760px) {
+  .skills-categories { grid-template-columns: 1fr; }
+}
+
+.skill-category { transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; }
+
+/* ── Logiciels & Outils : vraies icônes ── */
+.tools-section .sw-grid {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+.tools-section .sw-item {
+  gap: 10px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.tools-section .sw-item .icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--c, var(--purple));
+  background: color-mix(in srgb, var(--c, var(--purple)) 12%, white);
+  transition: transform 0.25s, background 0.25s, color 0.25s;
+}
+
+.tools-section .sw-item:hover .icon {
+  transform: scale(1.08);
+  background: var(--c, var(--purple));
+  color: #fff;
+}
+
+/* ── Langues : cartes avec drapeaux ── */
+.lang-section {
+  max-width: 900px;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.lang-card {
+  background: rgba(255,255,255,0.62);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  padding: 26px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.lang-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-d);
+  box-shadow: 0 14px 40px rgba(222,99,138,0.12);
+}
+
+.lang-flag {
+  width: 64px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(74,50,103,0.15);
+  margin-bottom: 14px;
+}
+
+.lang-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.lang-sub {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  margin-top: 2px;
+}
+
+.lang-level {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--purple-d);
+  background: rgba(222,99,138,0.10);
+  border: 1px solid rgba(222,99,138,0.25);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin: 12px 0 16px;
+}
+
+.lang-card .lang-bar { width: 100%; }
+
+@media (max-width: 760px) {
+  .lang-section { grid-template-columns: 1fr; max-width: 420px; }
+}

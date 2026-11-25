@@ -34,7 +34,7 @@ if (canUseCustomCursor) {
 
   document
     .querySelectorAll(
-      "a, button, .proj-card, .comp-card, .detail-card, .certification-card"
+      "a, button, .proj-card, .comp-card, .detail-card, .certification-card, .lang-card, .sw-item, .skill-category"
     )
     .forEach((element) => {
       element.addEventListener("mouseenter", () => {
