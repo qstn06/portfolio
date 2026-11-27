@@ -3167,3 +3167,30 @@ iframe {
 @media (max-width: 560px) {
   .cert-grid { grid-template-columns: 1fr; }
 }
+
+/* Badge image à la place de l'emoji (CCNA) */
+.cert-icon.cert-badge {
+  width: 52px;
+  height: 52px;
+  background: none;
+  padding: 0;
+}
+
+.cert-icon.cert-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* 6 certificats : 6 sur une ligne sur grand écran */
+.cert-grid {
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 1600px;
+}
+
+@media (max-width: 1500px) {
+  .cert-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.credly { background: #FF6B00; color: #fff; }
